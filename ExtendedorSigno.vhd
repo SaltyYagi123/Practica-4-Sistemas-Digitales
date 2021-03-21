@@ -15,12 +15,15 @@ ENTITY ExtendedorSigno IS
 END ExtendedorSigno;
 
 ARCHITECTURE behavioral OF ExtendedorSigno IS
+    signal alu_op_s: std_logic_vector(3 downto 0);
+    signal salida_s: std_logic_vector(32 downto 0);
 
 BEGIN
 
-	salida <= STD_LOGIC_VECTOR(resize(unsigned(entrada),33)) WHEN alu_op = "0010";
-
+    alu_op_s <= alu_op;
+	 
+	 salida <= STD_LOGIC_VECTOR(resize(unsigned(entrada), salida_s'width)) when alu_op_s = "0010";
+  
 END behavioral; -- behavioral
 
 --https://embdev.net/topic/236693 <- Codigo observado de aqui;
-
