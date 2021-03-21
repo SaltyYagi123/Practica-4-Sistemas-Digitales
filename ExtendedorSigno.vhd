@@ -18,7 +18,7 @@ ARCHITECTURE behavioral OF ExtendedorSigno IS
 
 BEGIN
 
-    IF (alu_op == "0010") THEN 
+    IF (alu_op = "0010") THEN 
         salida <= STD_LOGIC_VECTOR(resize(unsigned(entrada), salida'width));
     END IF;
 
