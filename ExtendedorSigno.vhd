@@ -10,7 +10,7 @@ ENTITY ExtendedorSigno IS
     PORT (
         alu_op : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
         entrada : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        salida : OUT STD_LOGIC_VECTOR(32 DOWNTO 0);
+        salida : OUT STD_LOGIC_VECTOR(32 DOWNTO 0)
     );
 END ExtendedorSigno;
 
@@ -18,10 +18,9 @@ ARCHITECTURE behavioral OF ExtendedorSigno IS
 
 BEGIN
 
-    IF (alu_op = "0010") THEN 
-        salida <= STD_LOGIC_VECTOR(resize(unsigned(entrada), salida'width));
-    END IF;
+	salida <= STD_LOGIC_VECTOR(resize(unsigned(entrada),33)) WHEN alu_op = "0010";
 
 END behavioral; -- behavioral
 
 --https://embdev.net/topic/236693 <- Codigo observado de aqui;
+

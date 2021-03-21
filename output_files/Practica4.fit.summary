@@ -1,15 +1,15 @@
-Fitter Status : Failed - Sun Mar 21 16:00:09 2021
+Fitter Status : Successful - Sun Mar 21 19:23:44 2021
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Practica4
-Top-level Entity Name : Multiplexor
+Top-level Entity Name : ExtendedorSigno
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 226 / 18,752 ( 1 % )
-    Total combinational functions : 226 / 18,752 ( 1 % )
+Total logic elements : 33 / 18,752 ( < 1 % )
+    Total combinational functions : 33 / 18,752 ( < 1 % )
     Dedicated logic registers : 0 / 18,752 ( 0 % )
 Total registers : 0
-Total pins : 356 / 315 ( 113 % )
+Total pins : 69 / 315 ( 22 % )
 Total virtual pins : 0
 Total memory bits : 0 / 239,616 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
