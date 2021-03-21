@@ -12,7 +12,7 @@ ENTITY SumadorRestador IS
     );
 END SumadorRestador;
 
-ARCHITECTURE structural OF SumadorRestador IS
+ARCHITECTURE behavioral OF SumadorRestador IS
     SIGNAL resultado : STD_LOGIC_VECTOR(n_bits - 1 DOWNTO 0); --Resultado de 33 bits intermedio
 BEGIN
     IF (s_r = "1000" OR s_r = "0011") THEN --Resta or SLT 
@@ -35,4 +35,4 @@ BEGIN
 END structural;
 
 -- RECORDATORIO IMPORTANTE AL INSTANCIAR TODOS LOS COMPONENTES EN LA PRAC FINAL
--- El Sig tiene que unirse al mux como "000..000"&sig donde tenemos 31 0
+-- El Sig tiene que unirse al mux como "000..000"&sig donde tenemos 31 0's

@@ -18,7 +18,16 @@ architecture behavioral of Desplazador is
     signal num_desplaz: integer range 0 to 31; --Internal Signal 
 begin 
 
-    num_desplaz <= to_integer(signed(shamt));
+    num_desplaz <= to_integer(signed(shamt)); --Esto nos pasa el numero que pasamos en binario de shamt a numero para desplazar 
 
+    if (alu_op = "0001") then --Shift left logical 
+        salida <= shift_left(unsigned(entrada), num_desplaz);
+    else if (alu_op = "0101") then --Shift Right logical
+        salida <= shift_right(unsigned(entrada), num_desplaz);
+    else if(alu_op = "1101") then  --Shift right arithmetic 
+        salida <= shift_right(signed(entrada), num_desplaz);
+    end if ;
 
 end behavioral ; -- behavioral
+
+--Codigo obtenido de: https://www.nandland.com/vhdl/examples/example-shifts.html
