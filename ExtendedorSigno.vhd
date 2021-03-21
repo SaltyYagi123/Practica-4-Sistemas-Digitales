@@ -14,12 +14,14 @@ ENTITY ExtendedorSigno IS
     );
 END ExtendedorSigno;
 
-architecture behavioral of ExtendedorSigno is
+ARCHITECTURE behavioral OF ExtendedorSigno IS
 
-begin
+BEGIN
 
-    salida <= std_logic_vector(resize(unsigned(entrada), salida'width));
+    IF (alu_op == "0010") THEN 
+        salida <= STD_LOGIC_VECTOR(resize(unsigned(entrada), salida'width));
+    END IF;
 
-end behavioral ; -- behavioral
+END behavioral; -- behavioral
 
 --https://embdev.net/topic/236693 <- Codigo observado de aqui;
