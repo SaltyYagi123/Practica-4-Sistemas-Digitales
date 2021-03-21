@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica4
-Sun Mar 21 16:00:04 2021
+Sun Mar 21 16:49:12 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,13 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -42,20 +36,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 21 16:00:04 2021           ;
+; Analysis & Synthesis Status        ; Failed - Sun Mar 21 16:49:12 2021               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica4                                       ;
-; Top-level Entity Name              ; Multiplexor                                     ;
+; Top-level Entity Name              ; ExtendedorSigno                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 225                                             ;
-;     Total combinational functions  ; 225                                             ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 356                                             ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -65,7 +59,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; Multiplexor        ; Practica4          ;
+; Top-level entity name                                                      ; ExtendedorSigno    ; Practica4          ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,111 +149,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                                               ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Multiplexor.vhd                  ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/Multiplexor.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 225    ;
-;                                             ;        ;
-; Total combinational functions               ; 225    ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 212    ;
-;     -- 3 input functions                    ; 13     ;
-;     -- <=2 input functions                  ; 0      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 225    ;
-;     -- arithmetic mode                      ; 0      ;
-;                                             ;        ;
-; Total registers                             ; 0      ;
-;     -- Dedicated logic registers            ; 0      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 356    ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-; Maximum fan-out node                        ; sel[1] ;
-; Maximum fan-out                             ; 92     ;
-; Total fan-out                               ; 919    ;
-; Average fan-out                             ; 1.58   ;
-+---------------------------------------------+--------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Multiplexor               ; 225 (225)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 356  ; 0            ; |Multiplexor        ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 16:1               ; 32 bits   ; 320 LEs       ; 224 LEs              ; 96 LEs                 ; No         ; |Multiplexor|Mux31         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar 21 16:00:00 2021
+    Info: Processing started: Sun Mar 21 16:49:11 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica4 -c Practica4
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Error (10396): VHDL syntax error at SumadorRestador.vhd(14): name used in construct must match previously specified name "sumadorRestador" File: C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/SumadorRestador.vhd Line: 14
+Error (10523): Ignored construct sumadorRestador at SumadorRestador.vhd(5) due to previous errors File: C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/SumadorRestador.vhd Line: 5
+Error (10500): VHDL syntax error at SumadorRestador.vhd(20) near text "BEGIN";  expecting an identifier File: C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/SumadorRestador.vhd Line: 20
+Info (12021): Found 0 design units, including 0 entities, in source file sumadorrestador.vhd
+Error (10500): VHDL syntax error at ShiftRightLogico.vhd(10) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ShiftRightLogico.vhd Line: 10
+Info (12021): Found 0 design units, including 0 entities, in source file shiftrightlogico.vhd
+Error (10500): VHDL syntax error at ShiftRightAnalogico.vhd(10) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ShiftRightAnalogico.vhd Line: 10
+Info (12021): Found 0 design units, including 0 entities, in source file shiftrightanalogico.vhd
+Error (10500): VHDL syntax error at ShiftLeftLogico.vhd(17) near text "begin";  expecting an identifier File: C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ShiftLeftLogico.vhd Line: 17
+Info (12021): Found 0 design units, including 0 entities, in source file shiftleftlogico.vhd
+Error (10500): VHDL syntax error at ExtendedorSigno.vhd(14) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ExtendedorSigno.vhd Line: 14
+Info (12021): Found 0 design units, including 0 entities, in source file extendedorsigno.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file multiplexor.vhd
     Info (12022): Found design unit 1: Multiplexor-behavioral
     Info (12023): Found entity 1: Multiplexor
-Info (12127): Elaborating entity "Multiplexor" for the top level hierarchy
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 581 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 324 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 225 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4632 megabytes
-    Info: Processing ended: Sun Mar 21 16:00:04 2021
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 7 errors, 1 warning
+    Error: Peak virtual memory: 4630 megabytes
+    Error: Processing ended: Sun Mar 21 16:49:12 2021
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
 
 

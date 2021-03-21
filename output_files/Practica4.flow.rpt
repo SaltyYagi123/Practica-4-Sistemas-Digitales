@@ -1,5 +1,5 @@
 Flow report for Practica4
-Sun Mar 21 16:00:09 2021
+Sun Mar 21 16:49:12 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Flow Failed - Sun Mar 21 16:00:09 2021          ;
+; Flow Status                        ; Flow Failed - Sun Mar 21 16:49:12 2021          ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica4                                       ;
-; Top-level Entity Name              ; Multiplexor                                     ;
+; Top-level Entity Name              ; ExtendedorSigno                                 ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 226 / 18,752 ( 1 % )                            ;
-;     Total combinational functions  ; 226 / 18,752 ( 1 % )                            ;
-;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                              ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 356 / 315 ( 113 % )                             ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -64,30 +64,30 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/21/2021 16:00:00 ;
+; Start date & time ; 03/21/2021 16:49:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Practica4           ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                           ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 84585008802334.161633880016576        ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; Multiplexor ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; Multiplexor ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; Multiplexor ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; Multiplexor                           ; Practica4     ; --          ; --             ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++-------------------------------------+---------------------------------------+---------------+-----------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name     ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 84585008802334.161634175126980        ; --            ; --              ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --              ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --              ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --              ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; ExtendedorSigno ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; ExtendedorSigno ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; ExtendedorSigno ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --              ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --              ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --              ; --             ;
+; TOP_LEVEL_ENTITY                    ; ExtendedorSigno                       ; Practica4     ; --              ; --             ;
++-------------------------------------+---------------------------------------+---------------+-----------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -95,9 +95,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 4632 MB             ; 00:00:02                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 4781 MB             ; 00:00:01                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,7 +106,6 @@ applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
 ; Analysis & Synthesis ; Valaritas        ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter               ; Valaritas        ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -115,7 +113,6 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Practica4 -c Practica4
-quartus_fit --read_settings_files=off --write_settings_files=off Practica4 -c Practica4
 
 
 
