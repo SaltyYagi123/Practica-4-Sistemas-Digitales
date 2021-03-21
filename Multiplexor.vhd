@@ -7,15 +7,15 @@ USE IEEE.numeric_std.ALL;
 ENTITY Multiplexor IS
   PORT (
     e0, e1, e2, e3, e4, e5, e6, e7, e8, e9 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    s : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+    alu_op : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    alu_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END Multiplexor;
 
 ARCHITECTURE behavioral OF Multiplexor IS
 
 BEGIN
-  WITH sel SELECT
-    s <= e0 WHEN "0000",
+  WITH alu_op SELECT
+    alu_out <= e0 WHEN "0000",
     e1 WHEN "0001",
     e2 WHEN "0010",
     e3 WHEN "0011",
