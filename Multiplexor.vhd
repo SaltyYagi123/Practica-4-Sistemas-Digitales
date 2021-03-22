@@ -5,10 +5,13 @@ USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
 ENTITY Multiplexor IS
+  GENERIC( 
+    g_data_w : integer:=32
+  );
   PORT (
-    e0, e1, e2, e3, e4, e5, e6, e7, e8, e9 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    e0, e1, e2, e3, e4, e5, e6, e7, e8, e9 : IN STD_LOGIC_VECTOR(g_data_w -1  DOWNTO 0);
     alu_op : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    alu_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+    alu_out : OUT STD_LOGIC_VECTOR(g_data_w -1  DOWNTO 0));
 END Multiplexor;
 
 ARCHITECTURE behavioral OF Multiplexor IS
@@ -25,6 +28,6 @@ BEGIN
     e7 WHEN "0111",
     e8 WHEN "1000",
     e9 WHEN "1001",
-    STD_LOGIC_VECTOR(to_unsigned(0, 32)) WHEN OTHERS;
+    STD_LOGIC_VECTOR(to_unsigned(0, g_data_width)) WHEN OTHERS;
 
 END behavioral; -- behavioral

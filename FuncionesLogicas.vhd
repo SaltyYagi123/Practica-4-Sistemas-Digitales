@@ -3,9 +3,12 @@ USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
 ENTITY FuncionesLogicas IS
+    GENERIC PORT(
+        g_data_W: integer:=32
+    );
     PORT (
-        a, b : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        salida : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        a, b : IN STD_LOGIC_VECTOR(g_data_w -1 DOWNTO 0);
+        salida : OUT STD_LOGIC_VECTOR(g_data_w -1 DOWNTO 0);
         alu_op : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
 END FuncionesLogicas;

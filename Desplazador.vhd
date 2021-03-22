@@ -6,16 +6,19 @@ USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
 ENTITY Desplazador IS
+    GENERIC (
+        g_data_w: integer:=32
+    );
     PORT (
-        entrada : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+        entrada : IN STD_LOGIC_VECTOR(g_data_w -1 DOWNTO 0);
         shamt : IN STD_LOGIC_VECTOR(4 DOWNTO 0); -- Entrada del numero
-        salida : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        salida : OUT STD_LOGIC_VECTOR(g_data_w -1 DOWNTO 0);
         alu_op : in std_logic_vector(3 DOWNTO 0)
     );
 END Desplazador;
 
 architecture behavioral of Desplazador is
-    signal num_desplaz: integer range 0 to 31; --Internal Signal 
+    signal num_desplaz: integer range 0 to g_data_w -1; --Internal Signal 
 	 signal alu_op_s: std_logic_vector(3 downto 0);
 	begin 
 
