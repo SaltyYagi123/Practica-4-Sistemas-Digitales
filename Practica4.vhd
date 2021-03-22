@@ -20,66 +20,82 @@ ENTITY Practica4 IS
 END Practica4;
 
 ARCHITECTURE structural OF Practica4 IS
-    --Metemos las señales intermedias por aqui, hold 
-    SIGNAL s0,s1,s2,s3,s4,s5,s6,s7,s8, s9, sal: std_logic_vector(g_data_w -1 downto 0);
-    SIGNAL a_extends,b_extends: std_logic_vector(g_data_w downto 0);
-    SIGNAL sig: std_logic;
+    --Metemos las seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±ales intermedias por aqui, hold 
+    SIGNAL s_sumaResta, s_slt_u, s_sll, s_srl, s_sra, s_xor, s_or, s_and : STD_LOGIC_VECTOR(g_data_w - 1 DOWNTO 0);
+    SIGNAL a_extends, b_extends : STD_LOGIC_VECTOR(g_data_w DOWNTO 0);
+    SIGNAL sig_s : STD_LOGIC;
 BEGIN
 
-    ExtendSignoa : ENTITY work.ExtendedorSigno
+    ExtendSignoA_i : ENTITY work.ExtendedorSigno
         PORT MAP(
-            alu_op <= alu_op,
-            entrada <= a,
-            salida <= a_extends;
+            alu_op => alu_op,
+            entrada => a,
+            salida => a_extends
         );
-    
-    ExtendSignob : entity work.extendSigno
-        port map(
-            alu_op <= alu_op, 
-            entrada <= b, 
-            salida <= b_extends;
-        )
 
-    Desplazador : ENTITY work.Desplazador
+    ExtendSignoB_i : ENTITY work.ExtendedorSigno
         PORT MAP(
-            entrada <=
-            shamt <=
-            salida <=
-            alu_op <=
+            alu_op => alu_op,
+            entrada => b,
+            salida => b_extends
+        );
+
+    Desplazador_i : ENTITY work.Desplazador
+        PORT MAP(
+            entrada => a,
+            shamt => shamt,
+            alu_op => alu_op,
+            salida_sll => s_sll,
+            salida_srl => s_srl,
+            salida_sra => s_sra
         );
 
     --Tenemos que re-escribirla y separarlas a componentes diferentes
-    FuncionesLogic : ENTITY work.FuncionesLogicas
+    FuncionXor_i : ENTITY work.ComponenteXor
         PORT MAP(
-            a <= a, 
-            b <= b, 
-            salida <=
-            alu_op <=
+            a => a,
+            b => b,
+            salida => s_xor,
+            alu_op => alu_op
         );
 
-    SumadorRestador : ENTITY work.SumadorRestadorComparador
+    FuncionAnd_i : ENTITY work.ComponenteAnd
         PORT MAP(
-            a <= a_extends,
-            b <= b_extends,
-            s <= s0,
-            s_r <= alu_op,
-            sig <= sig;
+            a => a,
+            b => b,
+            salida => s_and,
+            alu_op => alu_op
         );
 
-    Multiplexor : ENTITY work.Multiplexor
+    FunctionOr_i : ENTITY work.ComponenteOr
         PORT MAP(
-            e0 <= s0,
-            e1 <= s1,
-            e2 <= s2,
-            e3 <= s3,
-            e4 <= s4,
-            e5 <= s5,
-            e6 <= s6,
-            e7 <= s7,
-            e8 <= s8,
-            e9 <= s9,
-            alu_op <=
-            alu_out <= sal;
+            a => a,
+            b => b,
+            salida => s_or,
+            alu_op => alu_op
+        );
+
+    SumadorRestador_i : ENTITY work.SumadorRestadorComparador
+        PORT MAP(
+            a => a_extends,
+            b => b_extends,
+            s => s_sumaResta,
+            s_r => alu_op,
+            sig => sig_s
+        );
+
+    Multiplexor_i : ENTITY work.Multiplexor
+        PORT MAP(
+            s_sumaResta => s_sumaResta,
+            s_slt_u => s_slt_u,
+            s_sll => s_sll,
+            s_srl => s_srl,
+            s_sra => s_sra,
+            s_xor => s_xor,
+            s_or => s_or,
+            s_and => s_and,
+            alu_out => alu_out,
+				alu_op => alu_op
         );
 
     z <= '1' WHEN a = b ELSE

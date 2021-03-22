@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Practica4
-Mon Mar 22 08:49:58 2021
+Tue Mar 23 00:00:00 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -74,7 +74,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -121,92 +121,84 @@ No paths to report.
 No paths to report.
 
 
-+-----------------------------------------------------------+
-; Propagation Delay                                         ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; alu_op[0]   ; salida[32]  ;       ; 9.516 ; 9.516 ;       ;
-; alu_op[1]   ; salida[32]  ;       ; 9.237 ; 9.237 ;       ;
-; alu_op[2]   ; salida[32]  ;       ; 9.383 ; 9.383 ;       ;
-; entrada[0]  ; salida[0]   ; 4.620 ;       ;       ; 4.620 ;
-; entrada[1]  ; salida[1]   ; 9.482 ;       ;       ; 9.482 ;
-; entrada[2]  ; salida[2]   ; 8.513 ;       ;       ; 8.513 ;
-; entrada[3]  ; salida[3]   ; 8.553 ;       ;       ; 8.553 ;
-; entrada[4]  ; salida[4]   ; 8.524 ;       ;       ; 8.524 ;
-; entrada[5]  ; salida[5]   ; 9.573 ;       ;       ; 9.573 ;
-; entrada[6]  ; salida[6]   ; 9.484 ;       ;       ; 9.484 ;
-; entrada[7]  ; salida[7]   ; 9.572 ;       ;       ; 9.572 ;
-; entrada[8]  ; salida[8]   ; 9.340 ;       ;       ; 9.340 ;
-; entrada[9]  ; salida[9]   ; 9.622 ;       ;       ; 9.622 ;
-; entrada[10] ; salida[10]  ; 9.598 ;       ;       ; 9.598 ;
-; entrada[11] ; salida[11]  ; 9.332 ;       ;       ; 9.332 ;
-; entrada[12] ; salida[12]  ; 9.555 ;       ;       ; 9.555 ;
-; entrada[13] ; salida[13]  ; 8.544 ;       ;       ; 8.544 ;
-; entrada[14] ; salida[14]  ; 8.543 ;       ;       ; 8.543 ;
-; entrada[15] ; salida[15]  ; 8.793 ;       ;       ; 8.793 ;
-; entrada[16] ; salida[16]  ; 8.733 ;       ;       ; 8.733 ;
-; entrada[17] ; salida[17]  ; 9.293 ;       ;       ; 9.293 ;
-; entrada[18] ; salida[18]  ; 8.514 ;       ;       ; 8.514 ;
-; entrada[19] ; salida[19]  ; 8.523 ;       ;       ; 8.523 ;
-; entrada[20] ; salida[20]  ; 8.563 ;       ;       ; 8.563 ;
-; entrada[21] ; salida[21]  ; 9.588 ;       ;       ; 9.588 ;
-; entrada[22] ; salida[22]  ; 9.533 ;       ;       ; 9.533 ;
-; entrada[23] ; salida[23]  ; 8.479 ;       ;       ; 8.479 ;
-; entrada[24] ; salida[24]  ; 9.352 ;       ;       ; 9.352 ;
-; entrada[25] ; salida[25]  ; 9.508 ;       ;       ; 9.508 ;
-; entrada[26] ; salida[26]  ; 8.564 ;       ;       ; 8.564 ;
-; entrada[27] ; salida[27]  ; 9.276 ;       ;       ; 9.276 ;
-; entrada[28] ; salida[28]  ; 9.481 ;       ;       ; 9.481 ;
-; entrada[29] ; salida[29]  ; 8.554 ;       ;       ; 8.554 ;
-; entrada[30] ; salida[30]  ; 8.689 ;       ;       ; 8.689 ;
-; entrada[31] ; salida[31]  ; 8.549 ;       ;       ; 8.549 ;
-; entrada[31] ; salida[32]  ; 9.957 ;       ;       ; 9.957 ;
-+-------------+-------------+-------+-------+-------+-------+
++-----------------------------------------------------+
+; Propagation Delay                                   ;
++-------------+-------------+-------+----+----+-------+
+; Input Port  ; Output Port ; RR    ; RF ; FR ; FF    ;
++-------------+-------------+-------+----+----+-------+
+; entrada[0]  ; salida[0]   ; 9.503 ;    ;    ; 9.503 ;
+; entrada[1]  ; salida[1]   ; 9.545 ;    ;    ; 9.545 ;
+; entrada[2]  ; salida[2]   ; 8.483 ;    ;    ; 8.483 ;
+; entrada[3]  ; salida[3]   ; 8.463 ;    ;    ; 8.463 ;
+; entrada[4]  ; salida[4]   ; 8.524 ;    ;    ; 8.524 ;
+; entrada[5]  ; salida[5]   ; 8.554 ;    ;    ; 8.554 ;
+; entrada[6]  ; salida[6]   ; 9.481 ;    ;    ; 9.481 ;
+; entrada[7]  ; salida[7]   ; 9.580 ;    ;    ; 9.580 ;
+; entrada[8]  ; salida[8]   ; 9.508 ;    ;    ; 9.508 ;
+; entrada[9]  ; salida[9]   ; 9.646 ;    ;    ; 9.646 ;
+; entrada[10] ; salida[10]  ; 9.280 ;    ;    ; 9.280 ;
+; entrada[11] ; salida[11]  ; 8.783 ;    ;    ; 8.783 ;
+; entrada[12] ; salida[12]  ; 8.633 ;    ;    ; 8.633 ;
+; entrada[13] ; salida[13]  ; 8.674 ;    ;    ; 8.674 ;
+; entrada[14] ; salida[14]  ; 9.594 ;    ;    ; 9.594 ;
+; entrada[15] ; salida[15]  ; 8.473 ;    ;    ; 8.473 ;
+; entrada[16] ; salida[16]  ; 9.300 ;    ;    ; 9.300 ;
+; entrada[17] ; salida[17]  ; 8.529 ;    ;    ; 8.529 ;
+; entrada[18] ; salida[18]  ; 9.638 ;    ;    ; 9.638 ;
+; entrada[19] ; salida[19]  ; 9.636 ;    ;    ; 9.636 ;
+; entrada[20] ; salida[20]  ; 9.565 ;    ;    ; 9.565 ;
+; entrada[21] ; salida[21]  ; 8.544 ;    ;    ; 8.544 ;
+; entrada[22] ; salida[22]  ; 9.467 ;    ;    ; 9.467 ;
+; entrada[23] ; salida[23]  ; 9.276 ;    ;    ; 9.276 ;
+; entrada[24] ; salida[24]  ; 9.311 ;    ;    ; 9.311 ;
+; entrada[25] ; salida[25]  ; 9.451 ;    ;    ; 9.451 ;
+; entrada[26] ; salida[26]  ; 8.553 ;    ;    ; 8.553 ;
+; entrada[27] ; salida[27]  ; 9.293 ;    ;    ; 9.293 ;
+; entrada[28] ; salida[28]  ; 8.563 ;    ;    ; 8.563 ;
+; entrada[29] ; salida[29]  ; 8.514 ;    ;    ; 8.514 ;
+; entrada[30] ; salida[30]  ; 9.564 ;    ;    ; 9.564 ;
+; entrada[31] ; salida[31]  ; 8.443 ;    ;    ; 8.443 ;
++-------------+-------------+-------+----+----+-------+
 
 
-+-----------------------------------------------------------+
-; Minimum Propagation Delay                                 ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; alu_op[0]   ; salida[32]  ;       ; 9.516 ; 9.516 ;       ;
-; alu_op[1]   ; salida[32]  ;       ; 9.237 ; 9.237 ;       ;
-; alu_op[2]   ; salida[32]  ;       ; 9.383 ; 9.383 ;       ;
-; entrada[0]  ; salida[0]   ; 4.620 ;       ;       ; 4.620 ;
-; entrada[1]  ; salida[1]   ; 9.482 ;       ;       ; 9.482 ;
-; entrada[2]  ; salida[2]   ; 8.513 ;       ;       ; 8.513 ;
-; entrada[3]  ; salida[3]   ; 8.553 ;       ;       ; 8.553 ;
-; entrada[4]  ; salida[4]   ; 8.524 ;       ;       ; 8.524 ;
-; entrada[5]  ; salida[5]   ; 9.573 ;       ;       ; 9.573 ;
-; entrada[6]  ; salida[6]   ; 9.484 ;       ;       ; 9.484 ;
-; entrada[7]  ; salida[7]   ; 9.572 ;       ;       ; 9.572 ;
-; entrada[8]  ; salida[8]   ; 9.340 ;       ;       ; 9.340 ;
-; entrada[9]  ; salida[9]   ; 9.622 ;       ;       ; 9.622 ;
-; entrada[10] ; salida[10]  ; 9.598 ;       ;       ; 9.598 ;
-; entrada[11] ; salida[11]  ; 9.332 ;       ;       ; 9.332 ;
-; entrada[12] ; salida[12]  ; 9.555 ;       ;       ; 9.555 ;
-; entrada[13] ; salida[13]  ; 8.544 ;       ;       ; 8.544 ;
-; entrada[14] ; salida[14]  ; 8.543 ;       ;       ; 8.543 ;
-; entrada[15] ; salida[15]  ; 8.793 ;       ;       ; 8.793 ;
-; entrada[16] ; salida[16]  ; 8.733 ;       ;       ; 8.733 ;
-; entrada[17] ; salida[17]  ; 9.293 ;       ;       ; 9.293 ;
-; entrada[18] ; salida[18]  ; 8.514 ;       ;       ; 8.514 ;
-; entrada[19] ; salida[19]  ; 8.523 ;       ;       ; 8.523 ;
-; entrada[20] ; salida[20]  ; 8.563 ;       ;       ; 8.563 ;
-; entrada[21] ; salida[21]  ; 9.588 ;       ;       ; 9.588 ;
-; entrada[22] ; salida[22]  ; 9.533 ;       ;       ; 9.533 ;
-; entrada[23] ; salida[23]  ; 8.479 ;       ;       ; 8.479 ;
-; entrada[24] ; salida[24]  ; 9.352 ;       ;       ; 9.352 ;
-; entrada[25] ; salida[25]  ; 9.508 ;       ;       ; 9.508 ;
-; entrada[26] ; salida[26]  ; 8.564 ;       ;       ; 8.564 ;
-; entrada[27] ; salida[27]  ; 9.276 ;       ;       ; 9.276 ;
-; entrada[28] ; salida[28]  ; 9.481 ;       ;       ; 9.481 ;
-; entrada[29] ; salida[29]  ; 8.554 ;       ;       ; 8.554 ;
-; entrada[30] ; salida[30]  ; 8.689 ;       ;       ; 8.689 ;
-; entrada[31] ; salida[31]  ; 8.549 ;       ;       ; 8.549 ;
-; entrada[31] ; salida[32]  ; 9.957 ;       ;       ; 9.957 ;
-+-------------+-------------+-------+-------+-------+-------+
++-----------------------------------------------------+
+; Minimum Propagation Delay                           ;
++-------------+-------------+-------+----+----+-------+
+; Input Port  ; Output Port ; RR    ; RF ; FR ; FF    ;
++-------------+-------------+-------+----+----+-------+
+; entrada[0]  ; salida[0]   ; 9.503 ;    ;    ; 9.503 ;
+; entrada[1]  ; salida[1]   ; 9.545 ;    ;    ; 9.545 ;
+; entrada[2]  ; salida[2]   ; 8.483 ;    ;    ; 8.483 ;
+; entrada[3]  ; salida[3]   ; 8.463 ;    ;    ; 8.463 ;
+; entrada[4]  ; salida[4]   ; 8.524 ;    ;    ; 8.524 ;
+; entrada[5]  ; salida[5]   ; 8.554 ;    ;    ; 8.554 ;
+; entrada[6]  ; salida[6]   ; 9.481 ;    ;    ; 9.481 ;
+; entrada[7]  ; salida[7]   ; 9.580 ;    ;    ; 9.580 ;
+; entrada[8]  ; salida[8]   ; 9.508 ;    ;    ; 9.508 ;
+; entrada[9]  ; salida[9]   ; 9.646 ;    ;    ; 9.646 ;
+; entrada[10] ; salida[10]  ; 9.280 ;    ;    ; 9.280 ;
+; entrada[11] ; salida[11]  ; 8.783 ;    ;    ; 8.783 ;
+; entrada[12] ; salida[12]  ; 8.633 ;    ;    ; 8.633 ;
+; entrada[13] ; salida[13]  ; 8.674 ;    ;    ; 8.674 ;
+; entrada[14] ; salida[14]  ; 9.594 ;    ;    ; 9.594 ;
+; entrada[15] ; salida[15]  ; 8.473 ;    ;    ; 8.473 ;
+; entrada[16] ; salida[16]  ; 9.300 ;    ;    ; 9.300 ;
+; entrada[17] ; salida[17]  ; 8.529 ;    ;    ; 8.529 ;
+; entrada[18] ; salida[18]  ; 9.638 ;    ;    ; 9.638 ;
+; entrada[19] ; salida[19]  ; 9.636 ;    ;    ; 9.636 ;
+; entrada[20] ; salida[20]  ; 9.565 ;    ;    ; 9.565 ;
+; entrada[21] ; salida[21]  ; 8.544 ;    ;    ; 8.544 ;
+; entrada[22] ; salida[22]  ; 9.467 ;    ;    ; 9.467 ;
+; entrada[23] ; salida[23]  ; 9.276 ;    ;    ; 9.276 ;
+; entrada[24] ; salida[24]  ; 9.311 ;    ;    ; 9.311 ;
+; entrada[25] ; salida[25]  ; 9.451 ;    ;    ; 9.451 ;
+; entrada[26] ; salida[26]  ; 8.553 ;    ;    ; 8.553 ;
+; entrada[27] ; salida[27]  ; 9.293 ;    ;    ; 9.293 ;
+; entrada[28] ; salida[28]  ; 8.563 ;    ;    ; 8.563 ;
+; entrada[29] ; salida[29]  ; 8.514 ;    ;    ; 8.514 ;
+; entrada[30] ; salida[30]  ; 9.564 ;    ;    ; 9.564 ;
+; entrada[31] ; salida[31]  ; 8.443 ;    ;    ; 8.443 ;
++-------------+-------------+-------+----+----+-------+
 
 
 ----------------------------
@@ -239,92 +231,84 @@ No paths to report.
 No paths to report.
 
 
-+-----------------------------------------------------------+
-; Propagation Delay                                         ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; alu_op[0]   ; salida[32]  ;       ; 4.963 ; 4.963 ;       ;
-; alu_op[1]   ; salida[32]  ;       ; 4.849 ; 4.849 ;       ;
-; alu_op[2]   ; salida[32]  ;       ; 4.893 ; 4.893 ;       ;
-; entrada[0]  ; salida[0]   ; 2.262 ;       ;       ; 2.262 ;
-; entrada[1]  ; salida[1]   ; 4.957 ;       ;       ; 4.957 ;
-; entrada[2]  ; salida[2]   ; 4.592 ;       ;       ; 4.592 ;
-; entrada[3]  ; salida[3]   ; 4.612 ;       ;       ; 4.612 ;
-; entrada[4]  ; salida[4]   ; 4.586 ;       ;       ; 4.586 ;
-; entrada[5]  ; salida[5]   ; 5.023 ;       ;       ; 5.023 ;
-; entrada[6]  ; salida[6]   ; 4.960 ;       ;       ; 4.960 ;
-; entrada[7]  ; salida[7]   ; 5.036 ;       ;       ; 5.036 ;
-; entrada[8]  ; salida[8]   ; 4.959 ;       ;       ; 4.959 ;
-; entrada[9]  ; salida[9]   ; 5.064 ;       ;       ; 5.064 ;
-; entrada[10] ; salida[10]  ; 5.046 ;       ;       ; 5.046 ;
-; entrada[11] ; salida[11]  ; 4.951 ;       ;       ; 4.951 ;
-; entrada[12] ; salida[12]  ; 5.009 ;       ;       ; 5.009 ;
-; entrada[13] ; salida[13]  ; 4.606 ;       ;       ; 4.606 ;
-; entrada[14] ; salida[14]  ; 4.602 ;       ;       ; 4.602 ;
-; entrada[15] ; salida[15]  ; 4.709 ;       ;       ; 4.709 ;
-; entrada[16] ; salida[16]  ; 4.649 ;       ;       ; 4.649 ;
-; entrada[17] ; salida[17]  ; 4.924 ;       ;       ; 4.924 ;
-; entrada[18] ; salida[18]  ; 4.576 ;       ;       ; 4.576 ;
-; entrada[19] ; salida[19]  ; 4.602 ;       ;       ; 4.602 ;
-; entrada[20] ; salida[20]  ; 4.642 ;       ;       ; 4.642 ;
-; entrada[21] ; salida[21]  ; 5.042 ;       ;       ; 5.042 ;
-; entrada[22] ; salida[22]  ; 4.987 ;       ;       ; 4.987 ;
-; entrada[23] ; salida[23]  ; 4.550 ;       ;       ; 4.550 ;
-; entrada[24] ; salida[24]  ; 4.971 ;       ;       ; 4.971 ;
-; entrada[25] ; salida[25]  ; 4.974 ;       ;       ; 4.974 ;
-; entrada[26] ; salida[26]  ; 4.626 ;       ;       ; 4.626 ;
-; entrada[27] ; salida[27]  ; 4.908 ;       ;       ; 4.908 ;
-; entrada[28] ; salida[28]  ; 4.960 ;       ;       ; 4.960 ;
-; entrada[29] ; salida[29]  ; 4.616 ;       ;       ; 4.616 ;
-; entrada[30] ; salida[30]  ; 4.706 ;       ;       ; 4.706 ;
-; entrada[31] ; salida[31]  ; 4.610 ;       ;       ; 4.610 ;
-; entrada[31] ; salida[32]  ; 5.108 ;       ;       ; 5.108 ;
-+-------------+-------------+-------+-------+-------+-------+
++-----------------------------------------------------+
+; Propagation Delay                                   ;
++-------------+-------------+-------+----+----+-------+
+; Input Port  ; Output Port ; RR    ; RF ; FR ; FF    ;
++-------------+-------------+-------+----+----+-------+
+; entrada[0]  ; salida[0]   ; 4.967 ;    ;    ; 4.967 ;
+; entrada[1]  ; salida[1]   ; 4.994 ;    ;    ; 4.994 ;
+; entrada[2]  ; salida[2]   ; 4.562 ;    ;    ; 4.562 ;
+; entrada[3]  ; salida[3]   ; 4.542 ;    ;    ; 4.542 ;
+; entrada[4]  ; salida[4]   ; 4.586 ;    ;    ; 4.586 ;
+; entrada[5]  ; salida[5]   ; 4.616 ;    ;    ; 4.616 ;
+; entrada[6]  ; salida[6]   ; 4.959 ;    ;    ; 4.959 ;
+; entrada[7]  ; salida[7]   ; 5.028 ;    ;    ; 5.028 ;
+; entrada[8]  ; salida[8]   ; 4.974 ;    ;    ; 4.974 ;
+; entrada[9]  ; salida[9]   ; 5.066 ;    ;    ; 5.066 ;
+; entrada[10] ; salida[10]  ; 4.899 ;    ;    ; 4.899 ;
+; entrada[11] ; salida[11]  ; 4.699 ;    ;    ; 4.699 ;
+; entrada[12] ; salida[12]  ; 4.664 ;    ;    ; 4.664 ;
+; entrada[13] ; salida[13]  ; 4.700 ;    ;    ; 4.700 ;
+; entrada[14] ; salida[14]  ; 5.050 ;    ;    ; 5.050 ;
+; entrada[15] ; salida[15]  ; 4.552 ;    ;    ; 4.552 ;
+; entrada[16] ; salida[16]  ; 4.919 ;    ;    ; 4.919 ;
+; entrada[17] ; salida[17]  ; 4.600 ;    ;    ; 4.600 ;
+; entrada[18] ; salida[18]  ; 5.077 ;    ;    ; 5.077 ;
+; entrada[19] ; salida[19]  ; 5.065 ;    ;    ; 5.065 ;
+; entrada[20] ; salida[20]  ; 5.021 ;    ;    ; 5.021 ;
+; entrada[21] ; salida[21]  ; 4.606 ;    ;    ; 4.606 ;
+; entrada[22] ; salida[22]  ; 4.947 ;    ;    ; 4.947 ;
+; entrada[23] ; salida[23]  ; 4.908 ;    ;    ; 4.908 ;
+; entrada[24] ; salida[24]  ; 4.930 ;    ;    ; 4.930 ;
+; entrada[25] ; salida[25]  ; 4.929 ;    ;    ; 4.929 ;
+; entrada[26] ; salida[26]  ; 4.612 ;    ;    ; 4.612 ;
+; entrada[27] ; salida[27]  ; 4.924 ;    ;    ; 4.924 ;
+; entrada[28] ; salida[28]  ; 4.642 ;    ;    ; 4.642 ;
+; entrada[29] ; salida[29]  ; 4.576 ;    ;    ; 4.576 ;
+; entrada[30] ; salida[30]  ; 5.027 ;    ;    ; 5.027 ;
+; entrada[31] ; salida[31]  ; 4.522 ;    ;    ; 4.522 ;
++-------------+-------------+-------+----+----+-------+
 
 
-+-----------------------------------------------------------+
-; Minimum Propagation Delay                                 ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; alu_op[0]   ; salida[32]  ;       ; 4.963 ; 4.963 ;       ;
-; alu_op[1]   ; salida[32]  ;       ; 4.849 ; 4.849 ;       ;
-; alu_op[2]   ; salida[32]  ;       ; 4.893 ; 4.893 ;       ;
-; entrada[0]  ; salida[0]   ; 2.262 ;       ;       ; 2.262 ;
-; entrada[1]  ; salida[1]   ; 4.957 ;       ;       ; 4.957 ;
-; entrada[2]  ; salida[2]   ; 4.592 ;       ;       ; 4.592 ;
-; entrada[3]  ; salida[3]   ; 4.612 ;       ;       ; 4.612 ;
-; entrada[4]  ; salida[4]   ; 4.586 ;       ;       ; 4.586 ;
-; entrada[5]  ; salida[5]   ; 5.023 ;       ;       ; 5.023 ;
-; entrada[6]  ; salida[6]   ; 4.960 ;       ;       ; 4.960 ;
-; entrada[7]  ; salida[7]   ; 5.036 ;       ;       ; 5.036 ;
-; entrada[8]  ; salida[8]   ; 4.959 ;       ;       ; 4.959 ;
-; entrada[9]  ; salida[9]   ; 5.064 ;       ;       ; 5.064 ;
-; entrada[10] ; salida[10]  ; 5.046 ;       ;       ; 5.046 ;
-; entrada[11] ; salida[11]  ; 4.951 ;       ;       ; 4.951 ;
-; entrada[12] ; salida[12]  ; 5.009 ;       ;       ; 5.009 ;
-; entrada[13] ; salida[13]  ; 4.606 ;       ;       ; 4.606 ;
-; entrada[14] ; salida[14]  ; 4.602 ;       ;       ; 4.602 ;
-; entrada[15] ; salida[15]  ; 4.709 ;       ;       ; 4.709 ;
-; entrada[16] ; salida[16]  ; 4.649 ;       ;       ; 4.649 ;
-; entrada[17] ; salida[17]  ; 4.924 ;       ;       ; 4.924 ;
-; entrada[18] ; salida[18]  ; 4.576 ;       ;       ; 4.576 ;
-; entrada[19] ; salida[19]  ; 4.602 ;       ;       ; 4.602 ;
-; entrada[20] ; salida[20]  ; 4.642 ;       ;       ; 4.642 ;
-; entrada[21] ; salida[21]  ; 5.042 ;       ;       ; 5.042 ;
-; entrada[22] ; salida[22]  ; 4.987 ;       ;       ; 4.987 ;
-; entrada[23] ; salida[23]  ; 4.550 ;       ;       ; 4.550 ;
-; entrada[24] ; salida[24]  ; 4.971 ;       ;       ; 4.971 ;
-; entrada[25] ; salida[25]  ; 4.974 ;       ;       ; 4.974 ;
-; entrada[26] ; salida[26]  ; 4.626 ;       ;       ; 4.626 ;
-; entrada[27] ; salida[27]  ; 4.908 ;       ;       ; 4.908 ;
-; entrada[28] ; salida[28]  ; 4.960 ;       ;       ; 4.960 ;
-; entrada[29] ; salida[29]  ; 4.616 ;       ;       ; 4.616 ;
-; entrada[30] ; salida[30]  ; 4.706 ;       ;       ; 4.706 ;
-; entrada[31] ; salida[31]  ; 4.610 ;       ;       ; 4.610 ;
-; entrada[31] ; salida[32]  ; 5.108 ;       ;       ; 5.108 ;
-+-------------+-------------+-------+-------+-------+-------+
++-----------------------------------------------------+
+; Minimum Propagation Delay                           ;
++-------------+-------------+-------+----+----+-------+
+; Input Port  ; Output Port ; RR    ; RF ; FR ; FF    ;
++-------------+-------------+-------+----+----+-------+
+; entrada[0]  ; salida[0]   ; 4.967 ;    ;    ; 4.967 ;
+; entrada[1]  ; salida[1]   ; 4.994 ;    ;    ; 4.994 ;
+; entrada[2]  ; salida[2]   ; 4.562 ;    ;    ; 4.562 ;
+; entrada[3]  ; salida[3]   ; 4.542 ;    ;    ; 4.542 ;
+; entrada[4]  ; salida[4]   ; 4.586 ;    ;    ; 4.586 ;
+; entrada[5]  ; salida[5]   ; 4.616 ;    ;    ; 4.616 ;
+; entrada[6]  ; salida[6]   ; 4.959 ;    ;    ; 4.959 ;
+; entrada[7]  ; salida[7]   ; 5.028 ;    ;    ; 5.028 ;
+; entrada[8]  ; salida[8]   ; 4.974 ;    ;    ; 4.974 ;
+; entrada[9]  ; salida[9]   ; 5.066 ;    ;    ; 5.066 ;
+; entrada[10] ; salida[10]  ; 4.899 ;    ;    ; 4.899 ;
+; entrada[11] ; salida[11]  ; 4.699 ;    ;    ; 4.699 ;
+; entrada[12] ; salida[12]  ; 4.664 ;    ;    ; 4.664 ;
+; entrada[13] ; salida[13]  ; 4.700 ;    ;    ; 4.700 ;
+; entrada[14] ; salida[14]  ; 5.050 ;    ;    ; 5.050 ;
+; entrada[15] ; salida[15]  ; 4.552 ;    ;    ; 4.552 ;
+; entrada[16] ; salida[16]  ; 4.919 ;    ;    ; 4.919 ;
+; entrada[17] ; salida[17]  ; 4.600 ;    ;    ; 4.600 ;
+; entrada[18] ; salida[18]  ; 5.077 ;    ;    ; 5.077 ;
+; entrada[19] ; salida[19]  ; 5.065 ;    ;    ; 5.065 ;
+; entrada[20] ; salida[20]  ; 5.021 ;    ;    ; 5.021 ;
+; entrada[21] ; salida[21]  ; 4.606 ;    ;    ; 4.606 ;
+; entrada[22] ; salida[22]  ; 4.947 ;    ;    ; 4.947 ;
+; entrada[23] ; salida[23]  ; 4.908 ;    ;    ; 4.908 ;
+; entrada[24] ; salida[24]  ; 4.930 ;    ;    ; 4.930 ;
+; entrada[25] ; salida[25]  ; 4.929 ;    ;    ; 4.929 ;
+; entrada[26] ; salida[26]  ; 4.612 ;    ;    ; 4.612 ;
+; entrada[27] ; salida[27]  ; 4.924 ;    ;    ; 4.924 ;
+; entrada[28] ; salida[28]  ; 4.642 ;    ;    ; 4.642 ;
+; entrada[29] ; salida[29]  ; 4.576 ;    ;    ; 4.576 ;
+; entrada[30] ; salida[30]  ; 5.027 ;    ;    ; 5.027 ;
+; entrada[31] ; salida[31]  ; 4.522 ;    ;    ; 4.522 ;
++-------------+-------------+-------+----+----+-------+
 
 
 +----------------------------------------------------------------------------+
@@ -337,92 +321,84 @@ No paths to report.
 +------------------+-------+------+----------+---------+---------------------+
 
 
-+-----------------------------------------------------------+
-; Progagation Delay                                         ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; alu_op[0]   ; salida[32]  ;       ; 9.516 ; 9.516 ;       ;
-; alu_op[1]   ; salida[32]  ;       ; 9.237 ; 9.237 ;       ;
-; alu_op[2]   ; salida[32]  ;       ; 9.383 ; 9.383 ;       ;
-; entrada[0]  ; salida[0]   ; 4.620 ;       ;       ; 4.620 ;
-; entrada[1]  ; salida[1]   ; 9.482 ;       ;       ; 9.482 ;
-; entrada[2]  ; salida[2]   ; 8.513 ;       ;       ; 8.513 ;
-; entrada[3]  ; salida[3]   ; 8.553 ;       ;       ; 8.553 ;
-; entrada[4]  ; salida[4]   ; 8.524 ;       ;       ; 8.524 ;
-; entrada[5]  ; salida[5]   ; 9.573 ;       ;       ; 9.573 ;
-; entrada[6]  ; salida[6]   ; 9.484 ;       ;       ; 9.484 ;
-; entrada[7]  ; salida[7]   ; 9.572 ;       ;       ; 9.572 ;
-; entrada[8]  ; salida[8]   ; 9.340 ;       ;       ; 9.340 ;
-; entrada[9]  ; salida[9]   ; 9.622 ;       ;       ; 9.622 ;
-; entrada[10] ; salida[10]  ; 9.598 ;       ;       ; 9.598 ;
-; entrada[11] ; salida[11]  ; 9.332 ;       ;       ; 9.332 ;
-; entrada[12] ; salida[12]  ; 9.555 ;       ;       ; 9.555 ;
-; entrada[13] ; salida[13]  ; 8.544 ;       ;       ; 8.544 ;
-; entrada[14] ; salida[14]  ; 8.543 ;       ;       ; 8.543 ;
-; entrada[15] ; salida[15]  ; 8.793 ;       ;       ; 8.793 ;
-; entrada[16] ; salida[16]  ; 8.733 ;       ;       ; 8.733 ;
-; entrada[17] ; salida[17]  ; 9.293 ;       ;       ; 9.293 ;
-; entrada[18] ; salida[18]  ; 8.514 ;       ;       ; 8.514 ;
-; entrada[19] ; salida[19]  ; 8.523 ;       ;       ; 8.523 ;
-; entrada[20] ; salida[20]  ; 8.563 ;       ;       ; 8.563 ;
-; entrada[21] ; salida[21]  ; 9.588 ;       ;       ; 9.588 ;
-; entrada[22] ; salida[22]  ; 9.533 ;       ;       ; 9.533 ;
-; entrada[23] ; salida[23]  ; 8.479 ;       ;       ; 8.479 ;
-; entrada[24] ; salida[24]  ; 9.352 ;       ;       ; 9.352 ;
-; entrada[25] ; salida[25]  ; 9.508 ;       ;       ; 9.508 ;
-; entrada[26] ; salida[26]  ; 8.564 ;       ;       ; 8.564 ;
-; entrada[27] ; salida[27]  ; 9.276 ;       ;       ; 9.276 ;
-; entrada[28] ; salida[28]  ; 9.481 ;       ;       ; 9.481 ;
-; entrada[29] ; salida[29]  ; 8.554 ;       ;       ; 8.554 ;
-; entrada[30] ; salida[30]  ; 8.689 ;       ;       ; 8.689 ;
-; entrada[31] ; salida[31]  ; 8.549 ;       ;       ; 8.549 ;
-; entrada[31] ; salida[32]  ; 9.957 ;       ;       ; 9.957 ;
-+-------------+-------------+-------+-------+-------+-------+
++-----------------------------------------------------+
+; Progagation Delay                                   ;
++-------------+-------------+-------+----+----+-------+
+; Input Port  ; Output Port ; RR    ; RF ; FR ; FF    ;
++-------------+-------------+-------+----+----+-------+
+; entrada[0]  ; salida[0]   ; 9.503 ;    ;    ; 9.503 ;
+; entrada[1]  ; salida[1]   ; 9.545 ;    ;    ; 9.545 ;
+; entrada[2]  ; salida[2]   ; 8.483 ;    ;    ; 8.483 ;
+; entrada[3]  ; salida[3]   ; 8.463 ;    ;    ; 8.463 ;
+; entrada[4]  ; salida[4]   ; 8.524 ;    ;    ; 8.524 ;
+; entrada[5]  ; salida[5]   ; 8.554 ;    ;    ; 8.554 ;
+; entrada[6]  ; salida[6]   ; 9.481 ;    ;    ; 9.481 ;
+; entrada[7]  ; salida[7]   ; 9.580 ;    ;    ; 9.580 ;
+; entrada[8]  ; salida[8]   ; 9.508 ;    ;    ; 9.508 ;
+; entrada[9]  ; salida[9]   ; 9.646 ;    ;    ; 9.646 ;
+; entrada[10] ; salida[10]  ; 9.280 ;    ;    ; 9.280 ;
+; entrada[11] ; salida[11]  ; 8.783 ;    ;    ; 8.783 ;
+; entrada[12] ; salida[12]  ; 8.633 ;    ;    ; 8.633 ;
+; entrada[13] ; salida[13]  ; 8.674 ;    ;    ; 8.674 ;
+; entrada[14] ; salida[14]  ; 9.594 ;    ;    ; 9.594 ;
+; entrada[15] ; salida[15]  ; 8.473 ;    ;    ; 8.473 ;
+; entrada[16] ; salida[16]  ; 9.300 ;    ;    ; 9.300 ;
+; entrada[17] ; salida[17]  ; 8.529 ;    ;    ; 8.529 ;
+; entrada[18] ; salida[18]  ; 9.638 ;    ;    ; 9.638 ;
+; entrada[19] ; salida[19]  ; 9.636 ;    ;    ; 9.636 ;
+; entrada[20] ; salida[20]  ; 9.565 ;    ;    ; 9.565 ;
+; entrada[21] ; salida[21]  ; 8.544 ;    ;    ; 8.544 ;
+; entrada[22] ; salida[22]  ; 9.467 ;    ;    ; 9.467 ;
+; entrada[23] ; salida[23]  ; 9.276 ;    ;    ; 9.276 ;
+; entrada[24] ; salida[24]  ; 9.311 ;    ;    ; 9.311 ;
+; entrada[25] ; salida[25]  ; 9.451 ;    ;    ; 9.451 ;
+; entrada[26] ; salida[26]  ; 8.553 ;    ;    ; 8.553 ;
+; entrada[27] ; salida[27]  ; 9.293 ;    ;    ; 9.293 ;
+; entrada[28] ; salida[28]  ; 8.563 ;    ;    ; 8.563 ;
+; entrada[29] ; salida[29]  ; 8.514 ;    ;    ; 8.514 ;
+; entrada[30] ; salida[30]  ; 9.564 ;    ;    ; 9.564 ;
+; entrada[31] ; salida[31]  ; 8.443 ;    ;    ; 8.443 ;
++-------------+-------------+-------+----+----+-------+
 
 
-+-----------------------------------------------------------+
-; Minimum Progagation Delay                                 ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; alu_op[0]   ; salida[32]  ;       ; 4.963 ; 4.963 ;       ;
-; alu_op[1]   ; salida[32]  ;       ; 4.849 ; 4.849 ;       ;
-; alu_op[2]   ; salida[32]  ;       ; 4.893 ; 4.893 ;       ;
-; entrada[0]  ; salida[0]   ; 2.262 ;       ;       ; 2.262 ;
-; entrada[1]  ; salida[1]   ; 4.957 ;       ;       ; 4.957 ;
-; entrada[2]  ; salida[2]   ; 4.592 ;       ;       ; 4.592 ;
-; entrada[3]  ; salida[3]   ; 4.612 ;       ;       ; 4.612 ;
-; entrada[4]  ; salida[4]   ; 4.586 ;       ;       ; 4.586 ;
-; entrada[5]  ; salida[5]   ; 5.023 ;       ;       ; 5.023 ;
-; entrada[6]  ; salida[6]   ; 4.960 ;       ;       ; 4.960 ;
-; entrada[7]  ; salida[7]   ; 5.036 ;       ;       ; 5.036 ;
-; entrada[8]  ; salida[8]   ; 4.959 ;       ;       ; 4.959 ;
-; entrada[9]  ; salida[9]   ; 5.064 ;       ;       ; 5.064 ;
-; entrada[10] ; salida[10]  ; 5.046 ;       ;       ; 5.046 ;
-; entrada[11] ; salida[11]  ; 4.951 ;       ;       ; 4.951 ;
-; entrada[12] ; salida[12]  ; 5.009 ;       ;       ; 5.009 ;
-; entrada[13] ; salida[13]  ; 4.606 ;       ;       ; 4.606 ;
-; entrada[14] ; salida[14]  ; 4.602 ;       ;       ; 4.602 ;
-; entrada[15] ; salida[15]  ; 4.709 ;       ;       ; 4.709 ;
-; entrada[16] ; salida[16]  ; 4.649 ;       ;       ; 4.649 ;
-; entrada[17] ; salida[17]  ; 4.924 ;       ;       ; 4.924 ;
-; entrada[18] ; salida[18]  ; 4.576 ;       ;       ; 4.576 ;
-; entrada[19] ; salida[19]  ; 4.602 ;       ;       ; 4.602 ;
-; entrada[20] ; salida[20]  ; 4.642 ;       ;       ; 4.642 ;
-; entrada[21] ; salida[21]  ; 5.042 ;       ;       ; 5.042 ;
-; entrada[22] ; salida[22]  ; 4.987 ;       ;       ; 4.987 ;
-; entrada[23] ; salida[23]  ; 4.550 ;       ;       ; 4.550 ;
-; entrada[24] ; salida[24]  ; 4.971 ;       ;       ; 4.971 ;
-; entrada[25] ; salida[25]  ; 4.974 ;       ;       ; 4.974 ;
-; entrada[26] ; salida[26]  ; 4.626 ;       ;       ; 4.626 ;
-; entrada[27] ; salida[27]  ; 4.908 ;       ;       ; 4.908 ;
-; entrada[28] ; salida[28]  ; 4.960 ;       ;       ; 4.960 ;
-; entrada[29] ; salida[29]  ; 4.616 ;       ;       ; 4.616 ;
-; entrada[30] ; salida[30]  ; 4.706 ;       ;       ; 4.706 ;
-; entrada[31] ; salida[31]  ; 4.610 ;       ;       ; 4.610 ;
-; entrada[31] ; salida[32]  ; 5.108 ;       ;       ; 5.108 ;
-+-------------+-------------+-------+-------+-------+-------+
++-----------------------------------------------------+
+; Minimum Progagation Delay                           ;
++-------------+-------------+-------+----+----+-------+
+; Input Port  ; Output Port ; RR    ; RF ; FR ; FF    ;
++-------------+-------------+-------+----+----+-------+
+; entrada[0]  ; salida[0]   ; 4.967 ;    ;    ; 4.967 ;
+; entrada[1]  ; salida[1]   ; 4.994 ;    ;    ; 4.994 ;
+; entrada[2]  ; salida[2]   ; 4.562 ;    ;    ; 4.562 ;
+; entrada[3]  ; salida[3]   ; 4.542 ;    ;    ; 4.542 ;
+; entrada[4]  ; salida[4]   ; 4.586 ;    ;    ; 4.586 ;
+; entrada[5]  ; salida[5]   ; 4.616 ;    ;    ; 4.616 ;
+; entrada[6]  ; salida[6]   ; 4.959 ;    ;    ; 4.959 ;
+; entrada[7]  ; salida[7]   ; 5.028 ;    ;    ; 5.028 ;
+; entrada[8]  ; salida[8]   ; 4.974 ;    ;    ; 4.974 ;
+; entrada[9]  ; salida[9]   ; 5.066 ;    ;    ; 5.066 ;
+; entrada[10] ; salida[10]  ; 4.899 ;    ;    ; 4.899 ;
+; entrada[11] ; salida[11]  ; 4.699 ;    ;    ; 4.699 ;
+; entrada[12] ; salida[12]  ; 4.664 ;    ;    ; 4.664 ;
+; entrada[13] ; salida[13]  ; 4.700 ;    ;    ; 4.700 ;
+; entrada[14] ; salida[14]  ; 5.050 ;    ;    ; 5.050 ;
+; entrada[15] ; salida[15]  ; 4.552 ;    ;    ; 4.552 ;
+; entrada[16] ; salida[16]  ; 4.919 ;    ;    ; 4.919 ;
+; entrada[17] ; salida[17]  ; 4.600 ;    ;    ; 4.600 ;
+; entrada[18] ; salida[18]  ; 5.077 ;    ;    ; 5.077 ;
+; entrada[19] ; salida[19]  ; 5.065 ;    ;    ; 5.065 ;
+; entrada[20] ; salida[20]  ; 5.021 ;    ;    ; 5.021 ;
+; entrada[21] ; salida[21]  ; 4.606 ;    ;    ; 4.606 ;
+; entrada[22] ; salida[22]  ; 4.947 ;    ;    ; 4.947 ;
+; entrada[23] ; salida[23]  ; 4.908 ;    ;    ; 4.908 ;
+; entrada[24] ; salida[24]  ; 4.930 ;    ;    ; 4.930 ;
+; entrada[25] ; salida[25]  ; 4.929 ;    ;    ; 4.929 ;
+; entrada[26] ; salida[26]  ; 4.612 ;    ;    ; 4.612 ;
+; entrada[27] ; salida[27]  ; 4.924 ;    ;    ; 4.924 ;
+; entrada[28] ; salida[28]  ; 4.642 ;    ;    ; 4.642 ;
+; entrada[29] ; salida[29]  ; 4.576 ;    ;    ; 4.576 ;
+; entrada[30] ; salida[30]  ; 5.027 ;    ;    ; 5.027 ;
+; entrada[31] ; salida[31]  ; 4.522 ;    ;    ; 4.522 ;
++-------------+-------------+-------+----+----+-------+
 
 
 -------------------
@@ -450,10 +426,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 35    ; 35   ;
-; Unconstrained Input Port Paths  ; 36    ; 36   ;
-; Unconstrained Output Ports      ; 33    ; 33   ;
-; Unconstrained Output Port Paths ; 36    ; 36   ;
+; Unconstrained Input Ports       ; 32    ; 32   ;
+; Unconstrained Input Port Paths  ; 32    ; 32   ;
+; Unconstrained Output Ports      ; 32    ; 32   ;
+; Unconstrained Output Port Paths ; 32    ; 32   ;
 +---------------------------------+-------+------+
 
 
@@ -463,7 +439,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 22 08:49:56 2021
+    Info: Processing started: Tue Mar 23 00:00:00 2021
 Info: Command: quartus_sta Practica4 -c Practica4
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -496,9 +472,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4544 megabytes
-    Info: Processing ended: Mon Mar 22 08:49:58 2021
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4556 megabytes
+    Info: Processing ended: Tue Mar 23 00:00:00 2021
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

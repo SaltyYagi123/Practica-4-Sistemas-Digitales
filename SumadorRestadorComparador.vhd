@@ -3,7 +3,7 @@ USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 USE IEEE.std_logic_unsigned.ALL;
 
-ENTITY SumadorRestador IS
+ENTITY SumadorRestadorComparador IS
 	GENERIC (n_bits : INTEGER := 33);
 	PORT (
 		a, b : IN STD_LOGIC_VECTOR(n_bits - 1 DOWNTO 0); --Entrada
@@ -11,9 +11,9 @@ ENTITY SumadorRestador IS
 		s_r : IN STD_LOGIC_VECTOR(3 DOWNTO 0); --1 para resta o comparacion, 0 para sumar 
 		sig : OUT STD_LOGIC --Sacamos el signo
 	);
-END SumadorRestador;
+END SumadorRestadorComparador;
 
-ARCHITECTURE behavioral OF SumadorRestador IS
+ARCHITECTURE behavioral OF SumadorRestadorComparador IS
 	SIGNAL resultado : STD_LOGIC_VECTOR(n_bits - 1 DOWNTO 0); --Resultado de 33 bits intermedio
 	SIGNAL s_r_s : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL salida_s: std_LOGIC_VECTOR(n_bits -2 downto 0);

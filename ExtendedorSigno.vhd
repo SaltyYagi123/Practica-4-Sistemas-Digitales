@@ -20,7 +20,7 @@ ARCHITECTURE behavioral OF ExtendedorSigno IS
 
 BEGIN
 
-    salida <= entrada(g_data_w -1) & entrada when alu_op = "0000" or alu_op = "1000" else '0' & entrada;
+    salida <= std_logic_vector(resize(unsigned(entrada),salida'length));
   
 END behavioral; -- behavioral
 
