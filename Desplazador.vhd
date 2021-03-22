@@ -23,9 +23,9 @@ architecture behavioral of Desplazador is
     num_desplaz <= to_integer(signed(shamt)); --Esto nos pasa el numero que pasamos en binario de shamt a numero para desplazar 
 
 
-        salida <= shift_left(unsigned(entrada), num_desplaz) when alu_op_s = "0001";
-        salida <= shift_right(unsigned(entrada), num_desplaz) when alu_op_s = "0101";
-        salida <= shift_right(signed(entrada), num_desplaz) when alu_op_s = "1101";
+        salida <= std_logic_vector(shift_left(unsigned(entrada), num_desplaz)) when alu_op_s = "0001";
+        salida <= std_logic_vector(shift_right(unsigned(entrada), num_desplaz)) when alu_op_s = "0101";
+        salida <= std_logic_vector(shift_right(signed(entrada), num_desplaz)) when alu_op_s = "1101";
 
 end behavioral ; -- behavioral
 
