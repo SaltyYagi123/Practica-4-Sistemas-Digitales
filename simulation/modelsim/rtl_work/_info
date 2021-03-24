@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\stic\Desktop\Practica-4-Sistemas-Digitales-main\simulation\modelsim
+Edesplazador
+Z1 w1616575276
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\stic\Desktop\Practica-4-Sistemas-Digitales-main\simulation\modelsim
+Z6 8C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/Desplazador.vhd
+Z7 FC:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/Desplazador.vhd
+l0
+L10
+VN1[cGeP?_IJ]fD;k4]X<_3
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1616575992.168000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/Desplazador.vhd|
+Z11 !s107 C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/Desplazador.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 hDike@D8XK=@d8f8?`1O@0
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 11 desplazador 0 22 N1[cGeP?_IJ]fD;k4]X<_3
+l25
+L22
+V@?74HbRY`<^HNLKDi=cUO3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 hJK>Ed@MS_ag9HjLGVDjF2
+!i10b 1
+Edesplazador_vhd_tst
+Z14 w1616575988
+R2
+R3
+R4
+R5
+Z15 8C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht
+Z16 FC:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht
+l0
+L9
+VCJATI6fD;FY3>h35LSiLF0
+!s100 jo]7ZO=oFH>F>Rl95hW:f1
+R8
+31
+!i10b 1
+Z17 !s108 1616575992.355000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht|
+Z19 !s107 C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht|
+R12
+R13
+Adesplazador_arch
+R2
+R3
+R4
+DEx4 work 19 desplazador_vhd_tst 0 22 CJATI6fD;FY3>h35LSiLF0
+l30
+L11
+VZoPMii[Zi`:nVUj[F]oFi2
+!s100 6>E=o3hM;Rd61?c<LHm6L3
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

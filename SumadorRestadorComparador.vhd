@@ -14,9 +14,9 @@ ENTITY SumadorRestadorComparador IS
 END SumadorRestadorComparador;
 
 ARCHITECTURE behavioral OF SumadorRestadorComparador IS
-	SIGNAL resultado : STD_LOGIC_VECTOR(n_bits - 1 DOWNTO 0); --Resultado de 33 bits intermedio
-	SIGNAL s_r_s : STD_LOGIC_VECTOR(3 DOWNTO 0);
-	SIGNAL salida_s: std_LOGIC_VECTOR(n_bits -2 downto 0);
+	SIGNAL resultado : STD_LOGIC_VECTOR(n_bits -1 DOWNTO 0); --Resultado de 33 bits intermedio
+	SIGNAL s_r_s : STD_LOGIC_VECTOR(3 DOWNTO 0);  --4
+	SIGNAL salida_s: std_LOGIC_VECTOR(n_bits -2 downto 0); --32
 BEGIN
 	s_r_s <= s_r;
 
@@ -25,14 +25,14 @@ BEGIN
 		IF (s_r_s = "1000" OR s_r_s = "0011") THEN --Resta or SLT 
 			--Hacemos la resta porque si a es menor que b -> a - b da negativo por lo tanto 1 
 			resultado <= a - b;
-			salida_s <= resultado(n_bits - 2 DOWNTO 0);
+			salida_s <= resultado(n_bits - 2 DOWNTO 0);--32
 			IF (s_r = "0011") THEN
-				sig <= resultado(n_bits);
+				sig <= resultado(n_bits -1);
 			END IF;
 		ELSIF (s_r_s = "0000") THEN --Suma 
 				resultado <= a + b;
 				salida_s <= resultado(n_bits - 2 DOWNTO 0);
-				sig <= resultado(n_bits);
+				sig <= resultado(n_bits-1);
 		ELSIF (s_r_s = "0010") THEN --Set on Less Than Unsigned 
 				IF (unsigned(a) < unsigned(b)) THEN
 					sig <= '1';

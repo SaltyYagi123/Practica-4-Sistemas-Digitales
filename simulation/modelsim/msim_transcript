@@ -1,0 +1,97 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Practica4_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/Desplazador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Desplazador
+# -- Compiling architecture behavioral of Desplazador
+# 
+# vcom -93 -work work {C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Desplazador_vhd_tst
+# -- Compiling architecture Desplazador_arch of Desplazador_vhd_tst
+# ** Warning: [4] C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht(67): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [14] C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht(60): (vcom-1272) Length of expected is 5; length of actual is 4.
+# 
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Desplazador_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Desplazador_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.desplazador_vhd_tst(desplazador_arch)
+# Loading work.desplazador(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 5 (4 downto 0). Right is 4 (3 downto 0).
+#    Time: 0 ps  Iteration: 0  Process: /desplazador_vhd_tst/always File: C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht
+# Fatal error in ForLoop loop at C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht line 60
+# 
+# HDL call sequence:
+# Stopped at C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht 60 ForLoop loop
+# 
+do Practica4_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/Desplazador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Desplazador
+# -- Compiling architecture behavioral of Desplazador
+# 
+# vcom -93 -work work {C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Desplazador_vhd_tst
+# -- Compiling architecture Desplazador_arch of Desplazador_vhd_tst
+# ** Warning: [4] C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Desplazador.vht(67): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Desplazador_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Desplazador_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.desplazador_vhd_tst(desplazador_arch)
+# Loading work.desplazador(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all

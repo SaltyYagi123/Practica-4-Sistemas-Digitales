@@ -19,6 +19,6 @@ BEGIN
 
     alu_op_s <= alu_op;
 
-        salida <= a xor b when alu_op_s = "0100";
+    salida <= a xor b when alu_op_s = "0100";
 
 END behavioral; -- behavioral

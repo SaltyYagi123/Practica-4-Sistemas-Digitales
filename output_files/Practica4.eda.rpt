@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Practica4
-Tue Mar 23 00:00:01 2021
+Wed Mar 24 09:57:02 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Mar 23 00:00:01 2021 ;
+; EDA Netlist Writer Status ; Successful - Wed Mar 24 09:57:02 2021 ;
 ; Revision Name             ; Practica4                             ;
-; Top-level Entity Name     ; ExtendedorSigno                       ;
+; Top-level Entity Name     ; ComponenteXor                         ;
 ; Family                    ; Cyclone II                            ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                                                                                            ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                                                                                       ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/simulation/modelsim/Practica4.vho          ;
-; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/simulation/modelsim/Practica4_fast.vho     ;
-; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/simulation/modelsim/Practica4_vhd.sdo      ;
-; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/simulation/modelsim/Practica4_vhd_fast.sdo ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                          ;
++-----------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                     ;
++-----------------------------------------------------------------------------------------------------+
+; C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Practica4.vho          ;
+; C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Practica4_fast.vho     ;
+; C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Practica4_vhd.sdo      ;
+; C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Practica4_vhd_fast.sdo ;
++-----------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Mar 23 00:00:01 2021
+    Info: Processing started: Wed Mar 24 09:57:02 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Practica4 -c Practica4
-Info (204026): Generated files "Practica4.vho", "Practica4_fast.vho", "Practica4_vhd.sdo" and "Practica4_vhd_fast.sdo" in directory "C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "Practica4.vho", "Practica4_fast.vho", "Practica4_vhd.sdo" and "Practica4_vhd_fast.sdo" in directory "C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4528 megabytes
-    Info: Processing ended: Tue Mar 23 00:00:01 2021
+    Info: Peak virtual memory: 4547 megabytes
+    Info: Processing ended: Wed Mar 24 09:57:02 2021
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

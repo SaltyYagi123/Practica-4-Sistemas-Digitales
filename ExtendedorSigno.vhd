@@ -1,6 +1,7 @@
 --Extendedor de signo: 
 --Funcionalidad -> Extiende el signo cuando la funcion solicitada sea slt
 --Debemos comparar con un signo. 
+--YA ESTA SIMULADO BIG WOOP 
 
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
@@ -8,7 +9,7 @@ USE IEEE.numeric_std.ALL;
 USE IEEE.std_logic_unsigned.all;
 
 ENTITY ExtendedorSigno IS
-    GENERIC(g_data_w: integer:= 32);
+    GENERIC(g_data_w: integer:= 4);
     PORT (
         alu_op : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
         entrada : IN STD_LOGIC_VECTOR(g_data_w -1 DOWNTO 0);
@@ -20,7 +21,7 @@ ARCHITECTURE behavioral OF ExtendedorSigno IS
 
 BEGIN
 
-    salida <= std_logic_vector(resize(unsigned(entrada),salida'length));
+    salida <= std_logic_vector(resize(signed(entrada),salida'length)) when alu_op = "0010" else std_logic_vector(resize(unsigned(entrada),salida'length));
   
 END behavioral; -- behavioral
 

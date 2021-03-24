@@ -1,13 +1,15 @@
 --Por completar que haga la Shift Right Logical o Arithmetic o shift Left logical 
 --Dependiendo del valor de la alu_op 
 
+--IMPORTANTE CONSIDERAR QUE EN LA ALU EL DESPLAZAMIENTO NO DEBE DE SER CIRCULAR COMO SE MUESTRA EN EL TESTBENCH <- informe
+
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
 ENTITY Desplazador IS
     GENERIC (
-        g_data_w : INTEGER := 32
+        g_data_w : INTEGER := 4
     );
     PORT (
         entrada : IN STD_LOGIC_VECTOR(g_data_w - 1 DOWNTO 0);
@@ -18,16 +20,16 @@ ENTITY Desplazador IS
 END Desplazador;
 
 ARCHITECTURE behavioral OF Desplazador IS
-    SIGNAL num_desplaz : INTEGER RANGE 0 TO g_data_w - 1; --Internal Signal 
+    --SIGNAL num_desplaz : INTEGER RANGE 0 TO g_data_w - 1; --Internal Signal 
     SIGNAL alu_op_s : STD_LOGIC_VECTOR(3 DOWNTO 0);
 BEGIN
 
     alu_op_s <= alu_op;
-    num_desplaz <= to_integer(signed(shamt)); --Esto nos pasa el numero que pasamos en binario de shamt a numero para desplazar 
+    --num_desplaz <= to_integer(unsigned(shamt)); --Esto nos pasa el numero que pasamos en binario de shamt a numero para desplazar 
     
-    salida_sll <= STD_LOGIC_VECTOR(shift_left(unsigned(entrada), num_desplaz)) WHEN alu_op_s = "0001" ELSE (OTHERS => '0');
-    salida_srl <= STD_LOGIC_VECTOR(shift_right(unsigned(entrada), num_desplaz)) WHEN alu_op_s = "0101" ELSE (OTHERS => '0');
-    salida_sra <= STD_LOGIC_VECTOR(shift_right(signed(entrada), num_desplaz)) WHEN alu_op_s = "1101" ELSE (OTHERS => '0');
+    salida_sll <= STD_LOGIC_VECTOR(shift_left(unsigned(entrada), to_integer(unsigned(shamt)))) WHEN alu_op_s = "0001" ELSE (OTHERS => '0');
+    salida_srl <= STD_LOGIC_VECTOR(shift_right(unsigned(entrada), to_integer(unsigned(shamt)))) WHEN alu_op_s = "0101" ELSE (OTHERS => '0');
+    salida_sra <= STD_LOGIC_VECTOR(shift_right(signed(entrada), to_integer(unsigned(shamt)))) WHEN alu_op_s = "1101" ELSE (OTHERS => '0');
 
 END behavioral; -- behavioral
 
