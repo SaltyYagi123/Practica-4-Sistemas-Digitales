@@ -1,4 +1,9 @@
 --Esto es un multiplexor 10 a 1 para bits de 32  
+--Esencial una vez mas para aclararse con las entradas y salidas. 
+--Observamos que la ADD y SUB comparten entradas, al igual que la SLT y la SLTY 
+--El resto es asignacion simple 
+
+--Para pasarlo a la placa, TODO A 4 BITS 
 
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
@@ -6,7 +11,7 @@ USE IEEE.numeric_std.ALL;
 
 ENTITY Multiplexor IS
   GENERIC (
-    g_data_w : INTEGER := 32;
+    g_data_w : INTEGER := 4;
     c : INTEGER := 4
   );
   PORT (

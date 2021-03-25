@@ -1,5 +1,6 @@
 --Este es el componente donde instanciamos todo
---LA ALU 
+--LA ALU observamos en el diagrama de la practica que las salidas z, it, g_e son extensiones que se asignan aqui directamente 
+
 
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
@@ -7,11 +8,11 @@ USE IEEE.numeric_std.ALL;
 
 ENTITY Practica4 IS
     GENERIC (
-        g_data_w : INTEGER := 32
+        g_data_w : INTEGER := 4
     );
     PORT (
         a, b : IN STD_LOGIC_VECTOR(g_data_w - 1 DOWNTO 0);
-        shamt : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+        shamt : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
         alu_op : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
         alu_out : OUT STD_LOGIC_VECTOR(g_data_w - 1 DOWNTO 0);
         z, it, g_e : OUT STD_LOGIC
@@ -20,7 +21,7 @@ ENTITY Practica4 IS
 END Practica4;
 
 ARCHITECTURE structural OF Practica4 IS
-    --Metemos las seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±ales intermedias por aqui, hold 
+    --Metemos las señales intermedias por aqui, hold 
     SIGNAL s_sumaResta, s_slt_u, s_sll, s_srl, s_sra, s_xor, s_or, s_and : STD_LOGIC_VECTOR(g_data_w - 1 DOWNTO 0);
     SIGNAL a_extends, b_extends : STD_LOGIC_VECTOR(g_data_w DOWNTO 0);
     SIGNAL sig_s : STD_LOGIC;

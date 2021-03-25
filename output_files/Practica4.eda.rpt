@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Practica4
-Wed Mar 24 09:57:02 2021
+Thu Mar 25 22:10:53 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -8,9 +8,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ---------------------
   1. Legal Notice
   2. EDA Netlist Writer Summary
-  3. Simulation Settings
-  4. Simulation Generated Files
-  5. EDA Netlist Writer Messages
+  3. EDA Netlist Writer Messages
 
 
 
@@ -36,46 +34,11 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Mar 24 09:57:02 2021 ;
+; EDA Netlist Writer Status ; Successful - Thu Mar 25 22:10:53 2021 ;
 ; Revision Name             ; Practica4                             ;
-; Top-level Entity Name     ; ComponenteXor                         ;
+; Top-level Entity Name     ; Practica4                             ;
 ; Family                    ; Cyclone II                            ;
-; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                        ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Option                                                                                            ; Setting                ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
-; Generate netlist for functional simulation only                                                   ; Off                    ;
-; Time scale                                                                                        ; 1 ps                   ;
-; Truncate long hierarchy paths                                                                     ; Off                    ;
-; Map illegal HDL characters                                                                        ; Off                    ;
-; Flatten buses into individual nodes                                                               ; Off                    ;
-; Maintain hierarchy                                                                                ; Off                    ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                    ;
-; Enable glitch filtering                                                                           ; Off                    ;
-; Do not write top level VHDL entity                                                                ; Off                    ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                    ;
-; Architecture name in VHDL output netlist                                                          ; structure              ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                    ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                    ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                          ;
-+-----------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                     ;
-+-----------------------------------------------------------------------------------------------------+
-; C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Practica4.vho          ;
-; C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Practica4_fast.vho     ;
-; C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Practica4_vhd.sdo      ;
-; C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/Practica4_vhd_fast.sdo ;
-+-----------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,13 +47,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Mar 24 09:57:02 2021
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Practica4 -c Practica4
-Info (204026): Generated files "Practica4.vho", "Practica4_fast.vho", "Practica4_vhd.sdo" and "Practica4_vhd_fast.sdo" in directory "C:/Users/stic/Desktop/Practica-4-Sistemas-Digitales-main/simulation/modelsim/" for EDA simulation tool
+    Info: Processing started: Thu Mar 25 22:10:52 2021
+Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off Practica4 -c Practica4 --gen_testbench
+Info (201002): Generated VHDL Test Bench File C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/simulation/modelsim/Practica4.vht for simulation
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4547 megabytes
-    Info: Processing ended: Wed Mar 24 09:57:02 2021
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4528 megabytes
+    Info: Processing ended: Thu Mar 25 22:10:53 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
