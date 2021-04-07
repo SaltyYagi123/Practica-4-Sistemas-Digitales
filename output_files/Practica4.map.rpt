@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica4
-Thu Mar 25 22:08:06 2021
+Wed Apr 07 09:42:56 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,16 +13,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |Practica4
- 11. Parameter Settings for User Entity Instance: ExtendedorSigno:ExtendSignoA_i
- 12. Parameter Settings for User Entity Instance: ExtendedorSigno:ExtendSignoB_i
- 13. Parameter Settings for User Entity Instance: Desplazador:Desplazador_i
- 14. Parameter Settings for User Entity Instance: ComponenteXor:FuncionXor_i
- 15. Parameter Settings for User Entity Instance: ComponenteAnd:FuncionAnd_i
- 16. Parameter Settings for User Entity Instance: ComponenteOr:FunctionOr_i
- 17. Parameter Settings for User Entity Instance: SumadorRestadorComparador:SumadorRestador_i
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |Practica4
+ 10. Parameter Settings for User Entity Instance: Desplazador:Desplazador_i
+ 11. Parameter Settings for User Entity Instance: ComponenteXor:FuncionXor_i
+ 12. Parameter Settings for User Entity Instance: ComponenteAnd:FuncionAnd_i
+ 13. Parameter Settings for User Entity Instance: ComponenteOr:FunctionOr_i
+ 14. Parameter Settings for User Entity Instance: SumadorRestador:SumadorRestador_i
+ 15. Parameter Settings for User Entity Instance: ExtendedorSigno:ExtSigA
+ 16. Parameter Settings for User Entity Instance: ExtendedorSigno:ExtSigB
+ 17. Parameter Settings for User Entity Instance: Comparador:Comparador_i
  18. Parameter Settings for User Entity Instance: Multiplexor:Multiplexor_i
  19. Elapsed Time Per Partition
  20. Analysis & Synthesis Messages
@@ -51,13 +51,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 25 22:08:06 2021           ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 07 09:42:56 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica4                                       ;
 ; Top-level Entity Name              ; Practica4                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 42                                              ;
-;     Total combinational functions  ; 42                                              ;
+; Total logic elements               ; 57                                              ;
+;     Total combinational functions  ; 57                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 21                                              ;
@@ -164,82 +164,66 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                    ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                                                             ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; SumadorRestadorComparador.vhd    ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/SumadorRestadorComparador.vhd ;         ;
-; Practica4.vhd                    ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/Practica4.vhd                 ;         ;
-; Multiplexor.vhd                  ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/Multiplexor.vhd               ;         ;
-; ExtendedorSigno.vhd              ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ExtendedorSigno.vhd           ;         ;
-; Desplazador.vhd                  ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/Desplazador.vhd               ;         ;
-; ComponenteXor.vhd                ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ComponenteXor.vhd             ;         ;
-; ComponenteOr.vhd                 ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ComponenteOr.vhd              ;         ;
-; ComponenteAnd.vhd                ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ComponenteAnd.vhd             ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; SumadorRestador.vhd              ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/SumadorRestador.vhd ;         ;
+; Comparador.vhd                   ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/Comparador.vhd      ;         ;
+; Practica4.vhd                    ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/Practica4.vhd       ;         ;
+; Multiplexor.vhd                  ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/Multiplexor.vhd     ;         ;
+; ExtendedorSigno.vhd              ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ExtendedorSigno.vhd ;         ;
+; Desplazador.vhd                  ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/Desplazador.vhd     ;         ;
+; ComponenteXor.vhd                ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ComponenteXor.vhd   ;         ;
+; ComponenteOr.vhd                 ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ComponenteOr.vhd    ;         ;
+; ComponenteAnd.vhd                ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive - Universidad Pontificia Comillas/Stuff/ICAI/Segundo/2º Cuatrimestre/Sistemas Digitales II/Practicas/Practica-4-Sistemas-Digitales/ComponenteAnd.vhd   ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                             ;
-+---------------------------------------------+-----------------------------------------------------------+
-; Resource                                    ; Usage                                                     ;
-+---------------------------------------------+-----------------------------------------------------------+
-; Estimated Total logic elements              ; 42                                                        ;
-;                                             ;                                                           ;
-; Total combinational functions               ; 42                                                        ;
-; Logic element usage by number of LUT inputs ;                                                           ;
-;     -- 4 input functions                    ; 18                                                        ;
-;     -- 3 input functions                    ; 15                                                        ;
-;     -- <=2 input functions                  ; 9                                                         ;
-;                                             ;                                                           ;
-; Logic elements by mode                      ;                                                           ;
-;     -- normal mode                          ; 38                                                        ;
-;     -- arithmetic mode                      ; 4                                                         ;
-;                                             ;                                                           ;
-; Total registers                             ; 0                                                         ;
-;     -- Dedicated logic registers            ; 0                                                         ;
-;     -- I/O registers                        ; 0                                                         ;
-;                                             ;                                                           ;
-; I/O pins                                    ; 21                                                        ;
-; Embedded Multiplier 9-bit elements          ; 0                                                         ;
-; Maximum fan-out node                        ; SumadorRestadorComparador:SumadorRestador_i|salida_s[3]~0 ;
-; Maximum fan-out                             ; 9                                                         ;
-; Total fan-out                               ; 142                                                       ;
-; Average fan-out                             ; 2.25                                                      ;
-+---------------------------------------------+-----------------------------------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 57        ;
+;                                             ;           ;
+; Total combinational functions               ; 57        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 36        ;
+;     -- 3 input functions                    ; 14        ;
+;     -- <=2 input functions                  ; 7         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 50        ;
+;     -- arithmetic mode                      ; 7         ;
+;                                             ;           ;
+; Total registers                             ; 0         ;
+;     -- Dedicated logic registers            ; 0         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 21        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; alu_op[2] ;
+; Maximum fan-out                             ; 17        ;
+; Total fan-out                               ; 207       ;
+; Average fan-out                             ; 2.65      ;
++---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
-+--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Library Name ;
-+--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
-; |Practica4                                       ; 42 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |Practica4                                             ; work         ;
-;    |Desplazador:Desplazador_i|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica4|Desplazador:Desplazador_i                   ; work         ;
-;    |Multiplexor:Multiplexor_i|                   ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica4|Multiplexor:Multiplexor_i                   ; work         ;
-;    |SumadorRestadorComparador:SumadorRestador_i| ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica4|SumadorRestadorComparador:SumadorRestador_i ; work         ;
-+--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
+; |Practica4                             ; 57 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |Practica4                                   ; work         ;
+;    |Comparador:Comparador_i|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica4|Comparador:Comparador_i           ; work         ;
+;    |ExtendedorSigno:ExtSigA|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica4|ExtendedorSigno:ExtSigA           ; work         ;
+;    |ExtendedorSigno:ExtSigB|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica4|ExtendedorSigno:ExtSigB           ; work         ;
+;    |Multiplexor:Multiplexor_i|         ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica4|Multiplexor:Multiplexor_i         ; work         ;
+;    |SumadorRestador:SumadorRestador_i| ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica4|SumadorRestador:SumadorRestador_i ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                         ;
-+----------------------------------------------------------+---------------------------------------------------------+------------------------+
-; Latch Name                                               ; Latch Enable Signal                                     ; Free of Timing Hazards ;
-+----------------------------------------------------------+---------------------------------------------------------+------------------------+
-; SumadorRestadorComparador:SumadorRestador_i|salida_s[0]  ; SumadorRestadorComparador:SumadorRestador_i|salida_s[3] ; yes                    ;
-; SumadorRestadorComparador:SumadorRestador_i|salida_s[1]  ; SumadorRestadorComparador:SumadorRestador_i|salida_s[3] ; yes                    ;
-; SumadorRestadorComparador:SumadorRestador_i|salida_s[2]  ; SumadorRestadorComparador:SumadorRestador_i|salida_s[3] ; yes                    ;
-; SumadorRestadorComparador:SumadorRestador_i|salida_s[3]  ; SumadorRestadorComparador:SumadorRestador_i|salida_s[3] ; yes                    ;
-; SumadorRestadorComparador:SumadorRestador_i|sig          ; SumadorRestadorComparador:SumadorRestador_i|sig         ; yes                    ;
-; SumadorRestadorComparador:SumadorRestador_i|resultado[0] ; SumadorRestadorComparador:SumadorRestador_i|salida_s[3] ; yes                    ;
-; SumadorRestadorComparador:SumadorRestador_i|resultado[1] ; SumadorRestadorComparador:SumadorRestador_i|salida_s[3] ; yes                    ;
-; SumadorRestadorComparador:SumadorRestador_i|resultado[2] ; SumadorRestadorComparador:SumadorRestador_i|salida_s[3] ; yes                    ;
-; SumadorRestadorComparador:SumadorRestador_i|resultado[3] ; SumadorRestadorComparador:SumadorRestador_i|salida_s[3] ; yes                    ;
-; Number of user-specified and inferred latches = 9        ;                                                         ;                        ;
-+----------------------------------------------------------+---------------------------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -264,26 +248,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+-------+--------------------------------------------------+
 ; g_data_w       ; 4     ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ExtendedorSigno:ExtendSignoA_i ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; g_data_w       ; 4     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ExtendedorSigno:ExtendSignoB_i ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; g_data_w       ; 4     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -327,13 +291,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SumadorRestadorComparador:SumadorRestador_i ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; n_bits         ; 4     ; Signed Integer                                                  ;
-+----------------+-------+-----------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SumadorRestador:SumadorRestador_i ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n_bits         ; 4     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ExtendedorSigno:ExtSigA ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; g_data_w       ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ExtendedorSigno:ExtSigB ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; g_data_w       ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Comparador:Comparador_i ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; g_data_w       ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -363,12 +357,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 25 22:08:04 2021
+    Info: Processing started: Wed Apr 07 09:42:53 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica4 -c Practica4
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file sumadorrestadorcomparador.vhd
-    Info (12022): Found design unit 1: SumadorRestadorComparador-behavioral
-    Info (12023): Found entity 1: SumadorRestadorComparador
+Info (12021): Found 2 design units, including 1 entities, in source file sumadorrestador.vhd
+    Info (12022): Found design unit 1: SumadorRestador-behavioral
+    Info (12023): Found entity 1: SumadorRestador
+Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
+    Info (12022): Found design unit 1: Comparador-behavioral
+    Info (12023): Found entity 1: Comparador
+Warning (12019): Can't analyze file -- file SumadorRestadorComparador.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file practica4.vhd
     Info (12022): Found design unit 1: Practica4-structural
     Info (12023): Found entity 1: Practica4
@@ -391,44 +389,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file compone
     Info (12022): Found design unit 1: ComponenteAnd-behavioral
     Info (12023): Found entity 1: ComponenteAnd
 Info (12127): Elaborating entity "Practica4" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Practica4.vhd(24): used implicit default value for signal "s_slt_u" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Info (12128): Elaborating entity "ExtendedorSigno" for hierarchy "ExtendedorSigno:ExtendSignoA_i"
 Info (12128): Elaborating entity "Desplazador" for hierarchy "Desplazador:Desplazador_i"
 Info (12128): Elaborating entity "ComponenteXor" for hierarchy "ComponenteXor:FuncionXor_i"
 Info (12128): Elaborating entity "ComponenteAnd" for hierarchy "ComponenteAnd:FuncionAnd_i"
 Info (12128): Elaborating entity "ComponenteOr" for hierarchy "ComponenteOr:FunctionOr_i"
-Info (12128): Elaborating entity "SumadorRestadorComparador" for hierarchy "SumadorRestadorComparador:SumadorRestador_i"
-Warning (10492): VHDL Process Statement warning at SumadorRestadorComparador.vhd(29): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SumadorRestadorComparador.vhd(30): signal "s_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SumadorRestadorComparador.vhd(31): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SumadorRestadorComparador.vhd(35): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SumadorRestadorComparador.vhd(36): signal "resultado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SumadorRestadorComparador.vhd(43): signal "salida_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at SumadorRestadorComparador.vhd(24): inferring latch(es) for signal or variable "resultado", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at SumadorRestadorComparador.vhd(24): inferring latch(es) for signal or variable "salida_s", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at SumadorRestadorComparador.vhd(24): inferring latch(es) for signal or variable "sig", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "sig" at SumadorRestadorComparador.vhd(24)
-Info (10041): Inferred latch for "salida_s[0]" at SumadorRestadorComparador.vhd(24)
-Info (10041): Inferred latch for "salida_s[1]" at SumadorRestadorComparador.vhd(24)
-Info (10041): Inferred latch for "salida_s[2]" at SumadorRestadorComparador.vhd(24)
-Info (10041): Inferred latch for "salida_s[3]" at SumadorRestadorComparador.vhd(24)
-Info (10041): Inferred latch for "resultado[0]" at SumadorRestadorComparador.vhd(24)
-Info (10041): Inferred latch for "resultado[1]" at SumadorRestadorComparador.vhd(24)
-Info (10041): Inferred latch for "resultado[2]" at SumadorRestadorComparador.vhd(24)
-Info (10041): Inferred latch for "resultado[3]" at SumadorRestadorComparador.vhd(24)
+Info (12128): Elaborating entity "SumadorRestador" for hierarchy "SumadorRestador:SumadorRestador_i"
+Info (12128): Elaborating entity "ExtendedorSigno" for hierarchy "ExtendedorSigno:ExtSigA"
+Info (12128): Elaborating entity "Comparador" for hierarchy "Comparador:Comparador_i"
 Info (12128): Elaborating entity "Multiplexor" for hierarchy "Multiplexor:Multiplexor_i"
-Warning (13012): Latch SumadorRestadorComparador:SumadorRestador_i|sig has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alu_op[0]
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 63 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 42 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4631 megabytes
-    Info: Processing ended: Thu Mar 25 22:08:06 2021
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info (21061): Implemented 57 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4623 megabytes
+    Info: Processing ended: Wed Apr 07 09:42:56 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

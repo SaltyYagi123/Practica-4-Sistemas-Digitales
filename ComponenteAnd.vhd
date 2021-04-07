@@ -21,6 +21,6 @@ BEGIN
 
     alu_op_s <= alu_op;
 
-        salida <= a and b when alu_op_s = "0111" else "0000";
+    salida <= a and b when alu_op_s = "0111" else "0000";
 
 END behavioral; -- behavioral

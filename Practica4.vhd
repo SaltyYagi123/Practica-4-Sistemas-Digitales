@@ -1,7 +1,5 @@
 --Este es el componente donde instanciamos todo
 --LA ALU observamos en el diagrama de la practica que las salidas z, it, g_e son extensiones que se asignan aqui directamente 
-
-
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
@@ -27,19 +25,7 @@ ARCHITECTURE structural OF Practica4 IS
     SIGNAL sig_s : STD_LOGIC;
 BEGIN
 
-    ExtendSignoA_i : ENTITY work.ExtendedorSigno
-        PORT MAP(
-            alu_op => alu_op,
-            entrada => a,
-            salida => a_extends
-        );
 
-    ExtendSignoB_i : ENTITY work.ExtendedorSigno
-        PORT MAP(
-            alu_op => alu_op,
-            entrada => b,
-            salida => b_extends
-        );
 
     Desplazador_i : ENTITY work.Desplazador
         PORT MAP(
@@ -50,6 +36,8 @@ BEGIN
             salida_srl => s_srl,
             salida_sra => s_sra
         );
+
+    
 
     --Tenemos que re-escribirla y separarlas a componentes diferentes
     FuncionXor_i : ENTITY work.ComponenteXor
@@ -76,7 +64,7 @@ BEGIN
             alu_op => alu_op
         );
 
-    SumadorRestador_i : ENTITY work.SumadorRestadorComparador
+    SumadorRestador_i : ENTITY work.SumadorRestador
         PORT MAP(
             a => a_extends,
             b => b_extends,
@@ -85,24 +73,54 @@ BEGIN
             sig => sig_s
         );
 
+    
+    ExtSigA: entity work.ExtendedorSigno
+        generic map(g_data_w => 4)
+        port map(
+            entrada=> a, 
+            alu_op => alu_op, 
+            salida => a_extends
+        );
+
+    ExtSigB: entity work.ExtendedorSigno 
+        generic map(g_data_w => 4)
+        port map(
+            entrada => b, 
+            alu_op => alu_op, 
+            salida => b_extends
+        );
+
+    
+
+    Comparador_i: entity work.Comparador
+        generic map(g_data_w => 4)
+        port map(
+            a => a, 
+            b => b, 
+            s_r => alu_op, 
+            s => s_slt_u
+        );
+
+
+
     Multiplexor_i : ENTITY work.Multiplexor
         PORT MAP(
-            s_sumaResta => s_sumaResta,
-            s_slt_u => s_slt_u,
-            s_sll => s_sll,
-            s_srl => s_srl,
-            s_sra => s_sra,
-            s_xor => s_xor,
-            s_or => s_or,
-            s_and => s_and,
+            s_sumaResta => s_sumaResta, --Add/Sub
+            s_slt => s_slt_u, --SLT
+            s_slt_u => s_slt_u, --SLTU
+            s_sll => s_sll, --SLL
+            s_srl => s_srl, --SRL
+            s_sra => s_sra, --SRA
+            s_xor => s_xor, --XOR
+            s_or => s_or, --OR
+            s_and => s_and, --AND
             alu_out => alu_out,
-				alu_op => alu_op
+            alu_op => alu_op
         );
 
     z <= '1' WHEN a = b ELSE
         '0';
     it <= sig_s;
-
     g_e <= NOT(sig_s);
 
 END structural; -- structural
